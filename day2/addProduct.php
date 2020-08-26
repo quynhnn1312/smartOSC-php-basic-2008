@@ -1,3 +1,36 @@
+<?php
+    $idProduct = isset($_GET['id']) ? $_GET['id'] : 0;
+
+    if($_SERVER['REQUEST_METHOD']== 'POST'){
+        $sku = $_POST['sku'];
+        $title = $_POST['title'];
+        $price = $_POST['price'];
+        $size = $_POST['size'];
+        $color = $_POST['color'];
+        $description = $_POST['description'];
+
+        $error = [];
+
+        if($sku == NULL){
+            $error['sku'] = "* Please enter the product sku !";
+        }
+        if($title == NULL){
+            $error['title'] = "* Please enter the product sku !";
+        }
+        if($price == NULL){
+            $error['price'] = "* Please enter the product price !";
+        }
+        if($size == NULL){
+            $error['size'] = "* Please enter the product size !";
+        }
+        if($color == NULL){
+            $error['color'] = "* Please enter the product color !";
+        }
+        if($description == NULL){
+            $error['description'] = "* Please enter the product description !";
+        }
+    }
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -6,12 +39,13 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
 <div class="container">
     <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
-        <a class="navbar-brand text-white" href="#">SMART-OSC</a>
+        <a class="navbar-brand text-white border border-white px-2" href="#">SMART-OSC</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -31,31 +65,36 @@
     <section class="mt-5">
         <div class="card card-primary">
             <div class="card-header">
-                <h3 class="card-title">Add Product</h3>
+                <h3 class="card-title"><? echo $idProduct ? "Edit" : "Add" ?> Product</h3>
             </div>
-            <form role="form">
+            <form role="form" action="" method="post" enctype="multipart/form-data">
                 <div class="card-body">
                    <div class="row">
                        <div class="col-sm-6 col-md-6 col-6">
                            <div class="form-group">
                                <label for="Sku">Sku <span class="text-danger">*</span></label>
                                <input type="text" name="sku" class="form-control" placeholder="Enter sku ...">
+                               <span class="text-danger"><? echo isset($error['sku']) ? $error['sku'] : "" ?></span>
                            </div>
                            <div class="form-group">
                                <label for="Title">Title <span class="text-danger">*</span></label>
                                <input type="text" name="title" class="form-control" placeholder="Enter title ...">
+                               <span class="text-danger"><? echo isset($error['title']) ? $error['title'] : "" ?></span>
                            </div>
                            <div class="form-group">
                                <label for="Price">Price <span class="text-danger">*</span></label>
                                <input type="number" name="price" class="form-control" placeholder="Enter price ...">
+                               <span class="text-danger"><? echo isset($error['price']) ? $error['price'] : "" ?></span>
                            </div>
                            <div class="form-group">
                                <label for="Size">Size <span class="text-danger">*</span></label>
                                <input type="text" name="size" class="form-control" placeholder="Enter size ...">
+                               <span class="text-danger"><? echo isset($error['size']) ? $error['size'] : "" ?></span>
                            </div>
                            <div class="form-group">
                                <label for="Color">Color <span class="text-danger">*</span></label>
                                <input type="text" name="color" class="form-control" placeholder="Enter color ...">
+                               <span class="text-danger"><? echo isset($error['color']) ? $error['color'] : "" ?></span>
                            </div>
                        </div>
                        <div class="col-sm-6 col-md-6 col-6">
@@ -65,16 +104,19 @@
                            <div class="form-group">
                                <label for="Color">Image <span class="text-danger">*</span></label>
                                <input type="file" name="image" id="input" class="form-control" placeholder="Choose file">
+                               <span class="text-danger"></span>
                            </div>
                            <div class="form-group">
                                <label>description <span class="text-danger">*</span></label>
-                               <textarea class="form-control" rows="3" placeholder="Enter description..."></textarea>
+                               <textarea class="form-control" name="description" rows="3" placeholder="Enter description..."></textarea>
+                               <span class="text-danger"><? echo isset($error['description']) ? $error['description'] : "" ?></span>
                            </div>
                        </div>
                    </div>
                 </div>
                 <div class="card-footer">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" name="submit-form" class="btn btn-primary">Submit</button> &nbsp;
+                    <button type="reset" class="btn btn-danger">Reset</button>
                 </div>
             </form>
         </div>
@@ -86,7 +128,7 @@
         let output = document.getElementById('output');
         output.src = URL.createObjectURL(event.target.files[0]);
         output.onload = function() {
-            URL.revokeObjectURL(output.src) // free memory
+            URL.revokeObjectURL(output.src)
         }
     };
 </script>
