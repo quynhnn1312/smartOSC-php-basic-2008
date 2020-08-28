@@ -20,23 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55adf142-0571-4ebd-bd6c-78980cf60336" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/day2/_share/js/main.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day2/_share/style/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day2/db.text" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day2/function.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day2/productDetail.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day2/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day2/commons/nav.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day2/commons/script.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/smartOSC-php-basic-2008.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/smartOSC-php-basic-2008.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day2/.idea/day2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/day2/.idea/day2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day2/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/day2/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/day2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day2/addProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/day2/addProduct.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day2/_share/js/main.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day2/_share/style/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/day2/commons/head.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day2/addProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/day2/addForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day2/db.text" beforeDir="false" afterPath="$PROJECT_DIR$/day2/db.text" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day2/function.php" beforeDir="false" afterPath="$PROJECT_DIR$/day2/function.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/day2/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/day2/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day2/public/image/default-image.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/day2/public/image/default-image.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day2/public/image/image-default.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/day2/public/image/image-default.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day2/productDetail.php" beforeDir="false" afterPath="$PROJECT_DIR$/day2/productDetail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day2/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/day2/controller.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +52,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -83,6 +78,10 @@
       <workItem from="1598369807966" duration="2690000" />
       <workItem from="1598422901503" duration="702000" />
       <workItem from="1598429301427" duration="6802000" />
+      <workItem from="1598456418190" duration="1667000" />
+      <workItem from="1598490164346" duration="1353000" />
+      <workItem from="1598493472581" duration="9159000" />
+      <workItem from="1598520062149" duration="114000" />
     </task>
     <servers />
   </component>
@@ -99,16 +98,32 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="WindowStateProjectService">
     <state x="701" y="355" width="580" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598433997235">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="701" y="355" width="580" height="403" key="#com.intellij.fileTypes.FileTypeChooser/72.27.1848.1053@72.27.1848.1053" timestamp="1598433997235" />
+    <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1598520173689">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl/72.27.1848.1053@72.27.1848.1053" timestamp="1598520173689" />
+    <state x="749" y="237" width="483" height="640" key="RollbackChangesDialog" timestamp="1598456963755">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="749" y="237" width="483" height="640" key="RollbackChangesDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1598456963755" />
     <state x="479" y="148" width="1022" height="737" key="SettingsEditor" timestamp="1598430091390">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="479" y="148" width="1022" height="737" key="SettingsEditor/72.27.1848.1053@72.27.1848.1053" timestamp="1598430091390" />
+    <state x="660" y="252" key="run.anything.popup" timestamp="1598457079053">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="660" y="252" key="run.anything.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1598457079053" />
     <state x="659" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1598432775914">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
